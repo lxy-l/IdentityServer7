@@ -212,3 +212,4 @@ workspace.xml
 
 src/IdentityServer4/host/identityserver.db
 tempkey.jwk
+/test/WebIdentityServer/tempkey.jwk
