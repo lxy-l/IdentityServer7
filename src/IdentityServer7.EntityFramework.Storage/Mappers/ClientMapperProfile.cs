@@ -1,10 +1,9 @@
-﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
+// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
 using System.Security.Claims;
 using AutoMapper;
-using IdentityServer7.Stores.Models;
 
 namespace IdentityServer7.EntityFramework.Storage.Mappers;
 
@@ -24,7 +23,7 @@ public class ClientMapperProfile : Profile
         CreateMap<Entities.ClientProperty, KeyValuePair<string, string>>()
             .ReverseMap();
 
-        CreateMap<Entities.Client, Client>()
+        CreateMap<Entities.Client, IdentityServer7.Stores.Models.Client>()
             .ForMember(dest => dest.ProtocolType, opt => opt.Condition(srs => srs != null))
             .ForMember(x => x.AllowedIdentityTokenSigningAlgorithms, opts => opts.ConvertUsing(AllowedSigningAlgorithmsConverter.Converter, x => x.AllowedIdentityTokenSigningAlgorithms))
             .ReverseMap()
@@ -40,8 +39,8 @@ public class ClientMapperProfile : Profile
             .ReverseMap()
             .ForMember(dest => dest.Provider, opt => opt.MapFrom(src => src));
 
-        CreateMap<Entities.ClientClaim, ClientClaim>(MemberList.None)
-            .ConstructUsing(src => new ClientClaim(src.Type, src.Value, ClaimValueTypes.String))
+        CreateMap<Entities.ClientClaim, IdentityServer7.Stores.Models.ClientClaim>(MemberList.None)
+            .ConstructUsing(src => new IdentityServer7.Stores.Models.ClientClaim(src.Type, src.Value, ClaimValueTypes.String))
             .ReverseMap();
 
         CreateMap<Entities.ClientScope, string>()
@@ -64,7 +63,7 @@ public class ClientMapperProfile : Profile
             .ReverseMap()
             .ForMember(dest => dest.GrantType, opt => opt.MapFrom(src => src));
 
-        CreateMap<Entities.ClientSecret, Secret>(MemberList.Destination)
+        CreateMap<Entities.ClientSecret, IdentityServer7.Stores.Models.Secret>(MemberList.Destination)
             .ForMember(dest => dest.Type, opt => opt.Condition(srs => srs != null))
             .ReverseMap();
     }

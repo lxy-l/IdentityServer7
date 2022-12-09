@@ -1,10 +1,8 @@
-﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
+// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
 using AutoMapper;
-//using IdentityServer7.EntityFramework.Storage.Entities;
-using IdentityServer7.Stores.Models;
 
 namespace IdentityServer7.EntityFramework.Storage.Mappers;
 
@@ -26,9 +24,9 @@ public static class ClientMappers
     /// </summary>
     /// <param name="entity">The entity.</param>
     /// <returns></returns>
-    public static Client ToModel(this Entities.Client entity)
+    public static IdentityServer7.Stores.Models.Client ToModel(this Entities.Client entity)
     {
-        return Mapper.Map<Client>(entity);
+        return Mapper.Map<IdentityServer7.Stores.Models.Client>(entity);
     }
 
     /// <summary>
@@ -36,7 +34,7 @@ public static class ClientMappers
     /// </summary>
     /// <param name="model">The model.</param>
     /// <returns></returns>
-    public static Entities.Client ToEntity(this Client model)
+    public static Entities.Client ToEntity(this IdentityServer7.Stores.Models.Client model)
     {
         return Mapper.Map<Entities.Client>(model);
     }

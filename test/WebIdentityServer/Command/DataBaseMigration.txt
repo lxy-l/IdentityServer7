@@ -1,0 +1,5 @@
+Add-Migration CreateConfigurationDb -Context ConfigurationDbContext -o Data/Migrations/ConfigurationDb
+Add-Migration CreatePersistedDb -Context PersistedGrantDbContext -o Data/Migrations/PersistedGrantDb
+Add-Migration CreateApplicationDb -Context ApplicationDbContext -o Data/Migrations
+
+Update-Database -Context ApplicationDbContext

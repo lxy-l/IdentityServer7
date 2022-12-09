@@ -1,4 +1,4 @@
-﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
+// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
@@ -35,8 +35,8 @@ public static class ApiResourceMappers
     /// </summary>
     /// <param name="model">The model.</param>
     /// <returns></returns>
-    public static ApiResource ToEntity(this ApiResource model)
+    public static Entities.ApiResource ToEntity(this IdentityServer7.Stores.Models.ApiResource model)
     {
-        return model == null ? null : Mapper.Map<ApiResource>(model);
+        return model == null ? null : Mapper.Map<Entities.ApiResource>(model);
     }
 }

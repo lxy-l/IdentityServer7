@@ -1,4 +1,4 @@
-﻿// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
+// Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
@@ -35,7 +35,7 @@ public static class IdentityResourceMappers
     /// </summary>
     /// <param name="model">The model.</param>
     /// <returns></returns>
-    public static IdentityResource ToEntity(this IdentityResource model)
+    public static IdentityResource ToEntity(this IdentityServer7.Stores.Models.IdentityResource model)
     {
         return model == null ? null : Mapper.Map<IdentityResource>(model);
     }
