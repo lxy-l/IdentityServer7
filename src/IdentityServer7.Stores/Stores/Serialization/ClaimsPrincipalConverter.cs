@@ -20,7 +20,8 @@ public class ClaimsPrincipalConverter : JsonConverter<ClaimsPrincipal>
 
     public override ClaimsPrincipal Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        var source = JsonSerializer.Deserialize<ClaimsPrincipalLite>(ref reader);
+        options.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        var source = JsonSerializer.Deserialize<ClaimsPrincipalLite>(ref reader,options);
         if (source == null) return null;
 
         var claims = source.Claims.Select(x => new Claim(x.Type, x.Value, x.ValueType));
@@ -31,14 +32,15 @@ public class ClaimsPrincipalConverter : JsonConverter<ClaimsPrincipal>
 
     public override void Write(Utf8JsonWriter writer, ClaimsPrincipal value, JsonSerializerOptions options)
     {
-        var source = (ClaimsPrincipal)value;
+        options.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        var source = value;
 
         var target = new ClaimsPrincipalLite
         {
             AuthenticationType = source.Identity?.AuthenticationType ?? throw new NullReferenceException(),
             Claims = source.Claims.Select(x => new ClaimLite { Type = x.Type, Value = x.Value, ValueType = x.ValueType }).ToArray()
         };
-        JsonSerializer.Serialize(writer, target);
+        JsonSerializer.Serialize(writer, target,options);
     }
 
     //public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)

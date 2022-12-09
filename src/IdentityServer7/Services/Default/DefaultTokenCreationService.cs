@@ -2,15 +2,18 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
+using System.Globalization;
+using System.IdentityModel.Tokens.Jwt;
+
 using IdentityModel;
+
 using IdentityServer7.Configuration;
 using IdentityServer7.Extensions;
+using IdentityServer7.Stores.Models;
+
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using System.Globalization;
-using System.IdentityModel.Tokens.Jwt;
-using IdentityServer7.Stores.Models;
 
 namespace IdentityServer7.Services
 {
@@ -69,7 +72,6 @@ namespace IdentityServer7.Services
         {
             var header = await CreateHeaderAsync(token);
             var payload = await CreatePayloadAsync(token);
-
             return await CreateJwtAsync(new JwtSecurityToken(header, payload));
         }
 
@@ -130,7 +132,17 @@ namespace IdentityServer7.Services
         /// <returns>The signed JWT</returns>
         protected virtual Task<string> CreateJwtAsync(JwtSecurityToken jwt)
         {
-            var handler = new JwtSecurityTokenHandler();
+            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
+            try
+            {
+                var a = handler.WriteToken(jwt);
+            }
+            catch (Exception e)
+            {
+                //TODO 解决循环依赖
+                Console.WriteLine(e.Message);
+                throw;
+            }
             return Task.FromResult(handler.WriteToken(jwt));
         }
     }

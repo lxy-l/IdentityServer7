@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,7 +22,11 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 
 builder.Services.AddIdentityServerConfig(connectionString);
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    //options.JsonSerializerOptions.Converters.Add(new DateTimeOffsetJsonConverter());
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+}); ;
 builder.Services.AddRazorPages();
 
 var app = builder.Build();

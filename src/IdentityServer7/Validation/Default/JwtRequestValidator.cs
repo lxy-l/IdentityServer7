@@ -188,6 +188,13 @@ namespace IdentityServer7.Validation
         /// <returns></returns>
         protected virtual Task<Dictionary<string, string>> ProcessPayloadAsync(JwtSecurityToken token)
         {
+
+            // filter JWT validation values
+            var filter = Constants.Filters.JwtRequestClaimTypesFilter.ToList();
+
+            var filtered = token.Claims.Where(claim => !filter.Contains(claim.Type));
+
+
             // filter JWT validation values
             var payload = new Dictionary<string, string>();
             foreach (var key in token.Payload.Keys)
