@@ -22,7 +22,7 @@ public class PersistentGrantSerializer : IPersistentGrantSerializer
             //IgnoreReadOnlyProperties = true,
             //DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault,
             ReferenceHandler = ReferenceHandler.IgnoreCycles,
-            TypeInfoResolver= new CustomContractResolver()
+            //TypeInfoResolver= new CustomContractResolver()
         };
         _settings.Converters.Add(new ClaimConverter());
         _settings.Converters.Add(new ClaimsPrincipalConverter());

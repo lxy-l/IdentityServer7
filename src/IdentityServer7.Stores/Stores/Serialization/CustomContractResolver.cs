@@ -28,9 +28,9 @@ public class CustomContractResolver : DefaultJsonTypeInfoResolver
 
     public override JsonTypeInfo GetTypeInfo(Type type, JsonSerializerOptions options)
     {
-        options.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-        options.WriteIndented = true;
-        var a = base.GetTypeInfo(type, options);
+        //options.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+        //options.WriteIndented = true;
+        //var a = base.GetTypeInfo(type, options);
         return base.GetTypeInfo(type, options);
     }
 

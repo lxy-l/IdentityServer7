@@ -22,11 +22,12 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 
 builder.Services.AddIdentityServerConfig(connectionString);
 
-builder.Services.AddControllers().AddJsonOptions(options =>
-{
-    //options.JsonSerializerOptions.Converters.Add(new DateTimeOffsetJsonConverter());
-    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-}); ;
+builder.Services.AddControllers();
+//    .AddJsonOptions(options =>
+//{
+//    //options.JsonSerializerOptions.Converters.Add(new DateTimeOffsetJsonConverter());
+//    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+//}); ;
 builder.Services.AddRazorPages();
 
 var app = builder.Build();

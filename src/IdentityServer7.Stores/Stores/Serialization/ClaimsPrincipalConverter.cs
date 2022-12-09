@@ -20,7 +20,6 @@ public class ClaimsPrincipalConverter : JsonConverter<ClaimsPrincipal>
 
     public override ClaimsPrincipal Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        options.ReferenceHandler = ReferenceHandler.IgnoreCycles;
         var source = JsonSerializer.Deserialize<ClaimsPrincipalLite>(ref reader,options);
         if (source == null) return null;
 
@@ -32,7 +31,6 @@ public class ClaimsPrincipalConverter : JsonConverter<ClaimsPrincipal>
 
     public override void Write(Utf8JsonWriter writer, ClaimsPrincipal value, JsonSerializerOptions options)
     {
-        options.ReferenceHandler = ReferenceHandler.IgnoreCycles;
         var source = value;
 
         var target = new ClaimsPrincipalLite

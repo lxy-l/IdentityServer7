@@ -19,7 +19,6 @@ public class ClaimConverter : JsonConverter<Claim>
 
     public override Claim Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
     {
-        options.ReferenceHandler = ReferenceHandler.IgnoreCycles;
         var source = JsonSerializer.Deserialize<ClaimLite>(ref reader,options);
         if (source==null)
         {
@@ -31,7 +30,6 @@ public class ClaimConverter : JsonConverter<Claim>
 
     public override void Write(Utf8JsonWriter writer, Claim value, JsonSerializerOptions options)
     {
-        options.ReferenceHandler = ReferenceHandler.IgnoreCycles;
         var source = value;
 
         var target = new ClaimLite
