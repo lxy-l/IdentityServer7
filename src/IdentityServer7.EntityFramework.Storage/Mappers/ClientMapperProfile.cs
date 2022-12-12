@@ -3,7 +3,10 @@
 
 
 using System.Security.Claims;
+
 using AutoMapper;
+
+using IdentityServer7.Storage.Models;
 
 namespace IdentityServer7.EntityFramework.Storage.Mappers;
 
@@ -23,7 +26,7 @@ public class ClientMapperProfile : Profile
         CreateMap<Entities.ClientProperty, KeyValuePair<string, string>>()
             .ReverseMap();
 
-        CreateMap<Entities.Client, IdentityServer7.Stores.Models.Client>()
+        CreateMap<Entities.Client, Client>()
             .ForMember(dest => dest.ProtocolType, opt => opt.Condition(srs => srs != null))
             .ForMember(x => x.AllowedIdentityTokenSigningAlgorithms, opts => opts.ConvertUsing(AllowedSigningAlgorithmsConverter.Converter, x => x.AllowedIdentityTokenSigningAlgorithms))
             .ReverseMap()
@@ -39,8 +42,8 @@ public class ClientMapperProfile : Profile
             .ReverseMap()
             .ForMember(dest => dest.Provider, opt => opt.MapFrom(src => src));
 
-        CreateMap<Entities.ClientClaim, IdentityServer7.Stores.Models.ClientClaim>(MemberList.None)
-            .ConstructUsing(src => new IdentityServer7.Stores.Models.ClientClaim(src.Type, src.Value, ClaimValueTypes.String))
+        CreateMap<Entities.ClientClaim, ClientClaim>(MemberList.None)
+            .ConstructUsing(src => new IdentityServer7.Storage.Models.ClientClaim(src.Type, src.Value, ClaimValueTypes.String))
             .ReverseMap();
 
         CreateMap<Entities.ClientScope, string>()
@@ -63,7 +66,7 @@ public class ClientMapperProfile : Profile
             .ReverseMap()
             .ForMember(dest => dest.GrantType, opt => opt.MapFrom(src => src));
 
-        CreateMap<Entities.ClientSecret, IdentityServer7.Stores.Models.Secret>(MemberList.Destination)
+        CreateMap<Entities.ClientSecret, Secret>(MemberList.Destination)
             .ForMember(dest => dest.Type, opt => opt.Condition(srs => srs != null))
             .ReverseMap();
     }

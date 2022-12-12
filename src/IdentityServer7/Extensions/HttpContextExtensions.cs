@@ -7,7 +7,7 @@ using IdentityServer7.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using IdentityServer7.Models;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using Microsoft.AspNetCore.Authentication;
 
 #pragma warning disable 1591

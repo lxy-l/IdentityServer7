@@ -1,14 +1,18 @@
 // Copyright (c) Brock Allen & Dominick Baier. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
+//ProcessPayloadAsync方法更改
 
 using System.IdentityModel.Tokens.Jwt;
-using System.Xml;
+using System.Text.Json.Nodes;
+
 using IdentityModel;
+
 using IdentityServer7.Configuration;
 using IdentityServer7.Extensions;
 using IdentityServer7.Models;
-using IdentityServer7.Stores.Models;
+using IdentityServer7.Storage.Models;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
@@ -178,7 +182,7 @@ namespace IdentityServer7.Validation
 
             Handler.ValidateToken(jwtTokenString, tokenValidationParameters, out var token);
 
-            return Task.FromResult((JwtSecurityToken)token);
+            return Task.FromResult((JwtSecurityToken) token);
         }
 
         /// <summary>
@@ -208,13 +212,12 @@ namespace IdentityServer7.Validation
                         case string s:
                             payload.Add(key, s);
                             break;
-                        //TODO JSON处理
-                        //case JObject jobj:
-                        //    payload.Add(key, jobj.ToString(Formatting.None));
-                        //    break;
-                        //case JArray jarr:
-                        //    payload.Add(key, jarr.ToString(Formatting.None));
-                        //    break;
+                        case JsonObject jobj:
+                            payload.Add(key, jobj.ToJsonString());
+                            break;
+                        case JsonArray jarr:
+                            payload.Add(key, jarr.ToJsonString());
+                            break;
                     }
                 }
             }

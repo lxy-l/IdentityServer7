@@ -10,8 +10,8 @@ using IdentityServer7.Validation;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication;
 using IdentityServer7.Configuration;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Stores;
 
 namespace IdentityServer7.ResponseHandling
 {

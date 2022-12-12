@@ -10,13 +10,13 @@ using Microsoft.Extensions.Logging;
 using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using IdentityServer7.Configuration;
 using IdentityServer7.Logging.Models;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Stores;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authentication;
+using IdentityServer7.Storage.Stores;
+using IdentityServer7.Storage.Models;
 
 namespace IdentityServer7.Validation
 {

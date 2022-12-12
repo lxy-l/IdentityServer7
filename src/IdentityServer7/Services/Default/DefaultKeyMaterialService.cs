@@ -3,10 +3,10 @@
 
 
 using Microsoft.IdentityModel.Tokens;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using IdentityServer7.Models;
 using IdentityServer7.Extensions;
-using IdentityServer7.Stores.Extensions;
+using IdentityServer7.Storage.Extensions;
 
 namespace IdentityServer7.Services
 {

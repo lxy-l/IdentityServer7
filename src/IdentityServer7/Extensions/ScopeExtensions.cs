@@ -3,7 +3,8 @@
 
 
 using System.Diagnostics;
-using IdentityServer7.Stores.Models;
+
+using IdentityServer7.Storage.Models;
 
 namespace IdentityServer7.Models
 {

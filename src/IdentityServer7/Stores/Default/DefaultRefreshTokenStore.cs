@@ -4,11 +4,11 @@
 
 using Microsoft.Extensions.Logging;
 using IdentityServer7.Services;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Stores;
-using IdentityServer7.Stores.Stores.Serialization;
+using IdentityServer7.Storage.Stores;
+using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Stores.Serialization;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     /// <summary>
     /// Default refresh token store.

@@ -4,14 +4,14 @@
 
 using IdentityServer7.ResponseHandling;
 using IdentityServer7.Services;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using IdentityServer7.Validation;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using IdentityServer7.Configuration;
 using Microsoft.Extensions.Logging;
-using IdentityServer7.Stores.Stores;
-using IdentityServer7.Stores.Services;
 using IdentityServerConstants = IdentityServer7.IdentityServerConstants;
+using IdentityServer7.Storage.Services;
+using IdentityServer7.Storage.Stores;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -121,10 +121,10 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <param name="builder">The builder.</param>
         /// <returns></returns>
         public static IIdentityServerBuilder AddClientStore<T>(this IIdentityServerBuilder builder)
-           where T : class,IdentityServer7.Stores.Stores.IClientStore
+           where T : class, IClientStore
         {
             builder.Services.TryAddTransient(typeof(T));
-            builder.Services.AddTransient<IdentityServer7.Stores.Stores.IClientStore, ValidatingClientStore<T>>();
+            builder.Services.AddTransient<IClientStore, ValidatingClientStore<T>>();
 
             return builder;
         }

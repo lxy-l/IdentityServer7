@@ -4,8 +4,9 @@
 
 using IdentityServer7.EntityFramework.Storage.Interfaces;
 using IdentityServer7.EntityFramework.Storage.Mappers;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Stores;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 

@@ -9,7 +9,8 @@ using IdentityServer7.EntityFramework.Storage.Interfaces;
 using IdentityServer7.EntityFramework.Storage.Options;
 using IdentityServer7.EntityFramework.Storage.Stores;
 using IdentityServer7.EntityFramework.Storage.TokenCleanup;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Stores;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

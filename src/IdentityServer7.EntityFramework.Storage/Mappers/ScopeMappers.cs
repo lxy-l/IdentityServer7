@@ -3,7 +3,6 @@
 
 
 using AutoMapper;
-using IdentityServer7.EntityFramework.Storage.Entities;
 
 namespace IdentityServer7.EntityFramework.Storage.Mappers;
 
@@ -25,9 +24,9 @@ public static class ScopeMappers
     /// </summary>
     /// <param name="entity">The entity.</param>
     /// <returns></returns>
-    public static IdentityServer7.Stores.Models.ApiScope ToModel(this ApiScope entity)
+    public static IdentityServer7.Storage.Models.ApiScope ToModel(this Entities.ApiScope entity)
     {
-        return entity == null ? null : Mapper.Map<IdentityServer7.Stores.Models.ApiScope>(entity);
+        return entity == null ? null : Mapper.Map<IdentityServer7.Storage.Models.ApiScope>(entity);
     }
 
     /// <summary>
@@ -35,7 +34,7 @@ public static class ScopeMappers
     /// </summary>
     /// <param name="model">The model.</param>
     /// <returns></returns>
-    public static Entities.ApiScope ToEntity(this IdentityServer7.Stores.Models.ApiScope model)
+    public static Entities.ApiScope ToEntity(this IdentityServer7.Storage.Models.ApiScope model)
     {
         return model == null ? null : Mapper.Map<Entities.ApiScope>(model);
     }

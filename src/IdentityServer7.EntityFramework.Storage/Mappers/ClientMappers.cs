@@ -4,6 +4,8 @@
 
 using AutoMapper;
 
+using IdentityServer7.Storage.Models;
+
 namespace IdentityServer7.EntityFramework.Storage.Mappers;
 
 /// <summary>
@@ -24,9 +26,9 @@ public static class ClientMappers
     /// </summary>
     /// <param name="entity">The entity.</param>
     /// <returns></returns>
-    public static IdentityServer7.Stores.Models.Client ToModel(this Entities.Client entity)
+    public static Client ToModel(this Entities.Client entity)
     {
-        return Mapper.Map<IdentityServer7.Stores.Models.Client>(entity);
+        return Mapper.Map<Client>(entity);
     }
 
     /// <summary>
@@ -34,7 +36,7 @@ public static class ClientMappers
     /// </summary>
     /// <param name="model">The model.</param>
     /// <returns></returns>
-    public static Entities.Client ToEntity(this IdentityServer7.Stores.Models.Client model)
+    public static Entities.Client ToEntity(this Client model)
     {
         return Mapper.Map<Entities.Client>(model);
     }

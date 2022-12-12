@@ -3,13 +3,14 @@
 
 
 using IdentityServer7.Extensions;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using System.Security.Claims;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Logging;
 using IdentityServer7.Validation;
+using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Stores;
 
 namespace IdentityServer7.Services
 {

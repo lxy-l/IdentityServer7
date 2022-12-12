@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IdentityServer7.Stores\IdentityServer7.Stores.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="IdentityModel" />
     <None Remove="Microsoft.IdentityModel.Protocols.OpenIdConnect" />
     <None Remove="Microsoft.AspNetCore.Authentication.OpenIdConnect" />
@@ -20,5 +16,8 @@
     <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.25.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IdentityServer7.Storage\IdentityServer7.Storage.csproj" />
   </ItemGroup>
 </Project>

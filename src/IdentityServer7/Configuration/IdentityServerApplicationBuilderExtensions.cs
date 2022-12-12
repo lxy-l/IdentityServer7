@@ -5,12 +5,12 @@
 using IdentityServer7.Configuration;
 using IdentityServer7.Extensions;
 using IdentityServer7.Hosting;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System.Reflection;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Stores;
 
 namespace Microsoft.AspNetCore.Builder
 {

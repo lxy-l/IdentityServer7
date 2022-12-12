@@ -2,7 +2,8 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
-using IdentityServer7.Stores.Services;
+using IdentityServer7.Storage.Services;
+
 using Microsoft.Extensions.Logging;
 
 namespace IdentityServer7.Services

@@ -3,7 +3,8 @@
 
 
 using IdentityServer7.Services;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Stores;
+
 using Microsoft.Extensions.Logging;
 
 namespace IdentityServer7.Validation

@@ -4,7 +4,8 @@
 
 using IdentityServer7.Events;
 using IdentityServer7.Services;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Stores;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 

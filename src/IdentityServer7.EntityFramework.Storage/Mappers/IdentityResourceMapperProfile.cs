@@ -3,6 +3,9 @@
 
 
 using AutoMapper;
+
+using IdentityServer7.Storage.Models;
+
 namespace IdentityServer7.EntityFramework.Storage.Mappers;
 
 /// <summary>
@@ -19,8 +22,8 @@ public class IdentityResourceMapperProfile : Profile
         CreateMap<Entities.IdentityResourceProperty, KeyValuePair<string, string>>()
             .ReverseMap();
 
-        CreateMap<Entities.IdentityResource, IdentityServer7.Stores.Models.IdentityResource>(MemberList.Destination)
-            .ConstructUsing(src => new IdentityServer7.Stores.Models.IdentityResource())
+        CreateMap<Entities.IdentityResource, IdentityResource>(MemberList.Destination)
+            .ConstructUsing(src => new IdentityServer7.Storage.Models.IdentityResource())
             .ReverseMap();
 
         CreateMap<Entities.IdentityResourceClaim, string>()

@@ -4,6 +4,8 @@
 
 using AutoMapper;
 
+using IdentityServer7.Storage.Models;
+
 namespace IdentityServer7.EntityFramework.Storage.Mappers;
 
 /// <summary>
@@ -18,7 +20,7 @@ public class PersistedGrantMapperProfile:Profile
     /// </summary>
     public PersistedGrantMapperProfile()
     {
-        CreateMap<Entities.PersistedGrant,IdentityServer7.Stores.Models.PersistedGrant>(MemberList.Destination)
+        CreateMap<Entities.PersistedGrant, PersistedGrant>(MemberList.Destination)
             .ReverseMap();
     }
 }

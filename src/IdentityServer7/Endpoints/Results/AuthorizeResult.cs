@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using IdentityServer7.Services;
 using IdentityServer7.Configuration;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using IdentityServer7.ResponseHandling;
 using Microsoft.AspNetCore.Authentication;
 using System.Text.Encodings.Web;

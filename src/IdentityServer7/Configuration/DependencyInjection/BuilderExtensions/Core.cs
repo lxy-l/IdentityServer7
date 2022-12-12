@@ -11,8 +11,7 @@ using IdentityServer7.Extensions;
 using IdentityServer7.Hosting;
 using IdentityServer7.ResponseHandling;
 using IdentityServer7.Services;
-using IdentityServer7.Stores;
-using IdentityServer7.Stores.Stores.Serialization;
+using IdentityServer7.Storage;
 using IdentityServer7.Validation;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Http;
@@ -23,10 +22,11 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using IdentityServer7.Hosting.FederatedSignOut;
 using IdentityServer7.Services.Default;
-using IdentityServer7.Stores.Services;
-using IdentityServer7.Stores.Stores;
 using Constants = IdentityServer7.Constants;
 using IdentityServerConstants = IdentityServer7.IdentityServerConstants;
+using IdentityServer7.Storage.Services;
+using IdentityServer7.Storage.Stores;
+using IdentityServer7.Storage.Stores.Serialization;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

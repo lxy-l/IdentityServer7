@@ -3,7 +3,8 @@
 
 
 using System.Security.Claims;
-using IdentityServer7.Stores.Models;
+
+using IdentityServer7.Storage.Models;
 using IdentityServer7.Validation;
 
 namespace IdentityServer7.Services

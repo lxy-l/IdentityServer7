@@ -3,6 +3,7 @@
 
 
 using AutoMapper;
+
 using IdentityServer7.EntityFramework.Storage.Entities;
 
 namespace IdentityServer7.EntityFramework.Storage.Mappers;
@@ -26,8 +27,8 @@ public class ScopeMapperProfile : Profile
             .ReverseMap()
             .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src));
 
-        CreateMap<Entities.ApiScope,IdentityServer7.Stores.Models.ApiScope>(MemberList.Destination)
-            .ConstructUsing(src => new IdentityServer7.Stores.Models.ApiScope())
+        CreateMap<Entities.ApiScope, IdentityServer7.Storage.Models.ApiScope>(MemberList.Destination)
+            .ConstructUsing(src => new IdentityServer7.Storage.Models.ApiScope())
             .ForMember(x => x.Properties, opts => opts.MapFrom(x => x.Properties))
             .ForMember(x => x.UserClaims, opts => opts.MapFrom(x => x.UserClaims))
             .ReverseMap();

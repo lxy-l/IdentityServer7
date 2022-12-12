@@ -2,13 +2,16 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
-using Microsoft.AspNetCore.Http;
-using IdentityServer7.Extensions;
 using System.Security.Claims;
-using IdentityServer7.Services;
+
 using IdentityModel;
-using IdentityServer7.Stores.Models;
+
+using IdentityServer7.Extensions;
+using IdentityServer7.Services;
+using IdentityServer7.Storage.Models;
+
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 
 namespace IdentityServer7
 {

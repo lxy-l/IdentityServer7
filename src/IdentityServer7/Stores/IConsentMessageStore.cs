@@ -4,7 +4,7 @@
 
 using IdentityServer7.Models;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     /// <summary>
     /// Interface for consent messages that are sent from the consent UI to the authorization endpoint.

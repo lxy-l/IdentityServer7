@@ -5,10 +5,10 @@
 using IdentityServer7.Services;
 using IdentityServer7.Events;
 using IdentityServer7.Models;
-using IdentityServer7.Stores;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Http;
+using IdentityServer7.Storage.Stores;
 
 namespace IdentityServer7.Validation
 {

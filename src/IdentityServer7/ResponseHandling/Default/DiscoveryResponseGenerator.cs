@@ -5,14 +5,14 @@
 using IdentityModel;
 using IdentityServer7.Configuration;
 using IdentityServer7.Services;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using IdentityServer7.Validation;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography;
-using IdentityServer7.Stores.Extensions;
-using IdentityServer7.Stores.Stores;
 using StringExtensions = IdentityServer7.Extensions.StringExtensions;
+using IdentityServer7.Storage.Stores;
+using IdentityServer7.Storage.Extensions;
 
 namespace IdentityServer7.ResponseHandling
 {

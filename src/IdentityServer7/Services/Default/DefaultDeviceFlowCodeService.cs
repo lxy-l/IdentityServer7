@@ -1,6 +1,6 @@
 using IdentityServer7.Models;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Stores;
 
 namespace IdentityServer7.Services.Default
 {

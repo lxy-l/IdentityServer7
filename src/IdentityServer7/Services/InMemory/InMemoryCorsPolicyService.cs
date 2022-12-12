@@ -3,8 +3,9 @@
 
 
 using IdentityServer7.Extensions;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Services;
+using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Services;
+
 using Microsoft.Extensions.Logging;
 
 namespace IdentityServer7.Services

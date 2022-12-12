@@ -3,9 +3,11 @@
 
 
 using IdentityModel;
+
 using IdentityServer7.Extensions;
 using IdentityServer7.Models;
-using IdentityServer7.Stores.Models;
+using IdentityServer7.Storage.Models;
+
 using Microsoft.Extensions.Logging;
 
 namespace IdentityServer7.Validation

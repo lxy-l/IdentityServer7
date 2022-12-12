@@ -4,6 +4,8 @@
 
 using AutoMapper;
 
+using IdentityServer7.Storage.Models;
+
 namespace IdentityServer7.EntityFramework.Storage.Mappers;
 
 /// <summary>
@@ -24,9 +26,9 @@ public static class PersistedGrantMappers
     /// </summary>
     /// <param name="entity">The entity.</param>
     /// <returns></returns>
-    public static IdentityServer7.Stores.Models.PersistedGrant ToModel(this Entities.PersistedGrant entity)
+    public static PersistedGrant ToModel(this Entities.PersistedGrant entity)
     {
-        return entity == null ? null : Mapper.Map<IdentityServer7.Stores.Models.PersistedGrant>(entity);
+        return entity == null ? null : Mapper.Map<PersistedGrant>(entity);
     }
 
     /// <summary>
@@ -34,7 +36,7 @@ public static class PersistedGrantMappers
     /// </summary>
     /// <param name="model">The model.</param>
     /// <returns></returns>
-    public static Entities.PersistedGrant ToEntity(this IdentityServer7.Stores.Models.PersistedGrant model)
+    public static Entities.PersistedGrant ToEntity(this PersistedGrant model)
     {
         return model == null ? null : Mapper.Map<Entities.PersistedGrant>(model);
     }
@@ -44,7 +46,7 @@ public static class PersistedGrantMappers
     /// </summary>
     /// <param name="model">The model.</param>
     /// <param name="entity">The entity.</param>
-    public static void UpdateEntity(this IdentityServer7.Stores.Models.PersistedGrant model, Entities.PersistedGrant entity)
+    public static void UpdateEntity(this PersistedGrant model, Entities.PersistedGrant entity)
     {
         Mapper.Map(model, entity);
     }

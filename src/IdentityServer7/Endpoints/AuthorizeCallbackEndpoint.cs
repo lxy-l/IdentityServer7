@@ -10,7 +10,7 @@ using IdentityServer7.Hosting;
 using IdentityServer7.Models;
 using IdentityServer7.ResponseHandling;
 using IdentityServer7.Services;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using IdentityServer7.Validation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;

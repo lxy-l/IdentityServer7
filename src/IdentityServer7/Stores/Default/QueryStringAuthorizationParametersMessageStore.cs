@@ -5,7 +5,7 @@
 using IdentityServer7.Models;
 using IdentityServer7.Extensions;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     // public just for testing
     public class QueryStringAuthorizationParametersMessageStore : IAuthorizationParametersMessageStore

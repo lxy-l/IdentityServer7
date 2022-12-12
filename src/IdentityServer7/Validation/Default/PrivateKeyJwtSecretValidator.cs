@@ -3,10 +3,12 @@
 
 
 using System.IdentityModel.Tokens.Jwt;
+
 using IdentityServer7.Extensions;
 using IdentityServer7.Models;
 using IdentityServer7.Services;
-using IdentityServer7.Stores.Models;
+using IdentityServer7.Storage.Models;
+
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;

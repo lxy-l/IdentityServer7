@@ -10,7 +10,7 @@ using System.Text.Json.Nodes;
 using IdentityModel;
 
 using IdentityServer7.Configuration;
-using IdentityServer7.Stores.Models;
+using IdentityServer7.Storage.Models;
 
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Logging;

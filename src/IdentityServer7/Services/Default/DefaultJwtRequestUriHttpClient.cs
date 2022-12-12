@@ -5,7 +5,7 @@
 using Microsoft.Extensions.Logging;
 using IdentityModel;
 using IdentityServer7.Configuration;
-using IdentityServer7.Stores.Models;
+using IdentityServer7.Storage.Models;
 
 namespace IdentityServer7.Services
 {

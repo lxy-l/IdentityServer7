@@ -3,11 +3,11 @@
 
 
 using System.Collections.Concurrent;
-using IdentityServer7.Stores.Stores;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Extensions;
+using IdentityServer7.Storage.Stores;
+using IdentityServer7.Storage.Extensions;
+using IdentityServer7.Storage.Models;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     /// <summary>
     /// In-memory persisted grant store

@@ -9,7 +9,7 @@ using IdentityModel;
 
 using IdentityServer7.Configuration;
 using IdentityServer7.Extensions;
-using IdentityServer7.Stores.Models;
+using IdentityServer7.Storage.Models;
 
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Logging;
@@ -133,16 +133,7 @@ namespace IdentityServer7.Services
         protected virtual Task<string> CreateJwtAsync(JwtSecurityToken jwt)
         {
             JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
-            try
-            {
-                var a = handler.WriteToken(jwt);
-            }
-            catch (Exception e)
-            {
-                //TODO 解决循环依赖
-                Console.WriteLine(e.Message);
-                throw;
-            }
+            //TODO Json循环依赖
             return Task.FromResult(handler.WriteToken(jwt));
         }
     }

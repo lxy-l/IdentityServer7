@@ -9,7 +9,7 @@ using IdentityServer7.Configuration;
 using IdentityServer7.Configuration.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using IdentityServer7.Extensions;
-using IdentityServer7.Stores.Services;
+using IdentityServer7.Storage.Services;
 
 namespace IdentityServer7.Hosting
 {

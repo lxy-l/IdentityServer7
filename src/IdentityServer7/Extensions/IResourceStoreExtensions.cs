@@ -4,10 +4,10 @@
 
 using IdentityServer7.Models;
 using IdentityServer7.Validation;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Stores;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     /// <summary>
     /// Extensions for IResourceStore

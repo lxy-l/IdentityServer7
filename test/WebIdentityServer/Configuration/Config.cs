@@ -1,7 +1,7 @@
 
 using IdentityServer7;
 using IdentityServer7.Models;
-using IdentityServer7.Stores.Models;
+using IdentityServer7.Storage.Models;
 
 namespace WebIdentityServer.Configuration
 {

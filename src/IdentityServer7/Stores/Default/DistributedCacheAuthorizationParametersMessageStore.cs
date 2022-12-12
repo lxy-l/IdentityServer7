@@ -3,7 +3,7 @@ using IdentityServer7.Models;
 using IdentityServer7.Services;
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace IdentityServer7.Stores.Default
+namespace IdentityServer7.Storage.Default
 {
     /// <summary>
     /// Implementation of IAuthorizationParametersMessageStore that uses the IDistributedCache.

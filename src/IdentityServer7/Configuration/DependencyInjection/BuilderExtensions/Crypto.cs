@@ -4,7 +4,7 @@
 
 using IdentityServer7.Configuration;
 using IdentityServer7.Models;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Cryptography.X509Certificates;
 using System.Text.Json;

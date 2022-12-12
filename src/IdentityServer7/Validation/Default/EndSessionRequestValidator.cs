@@ -9,7 +9,7 @@ using System.Collections.Specialized;
 using System.Security.Claims;
 using IdentityServer7.Configuration;
 using IdentityServer7.Services;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using Microsoft.AspNetCore.Http;
 using IdentityServer7.Logging.Models;
 using IdentityServer7.Models;

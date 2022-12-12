@@ -8,7 +8,7 @@ using IdentityModel;
 using System.Text;
 using Microsoft.Extensions.Logging;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     /// <summary>
     /// IMessageStore implementation that uses data protection to protect message.
@@ -16,7 +16,7 @@ namespace IdentityServer7.Stores
     /// <typeparam name="TModel"></typeparam>
     public class ProtectedDataMessageStore<TModel> : IMessageStore<TModel>
     {
-        private const string Purpose = "IdentityServer7.Stores.ProtectedDataMessageStore";
+        private const string Purpose = "IdentityServer7.Storage.ProtectedDataMessageStore";
 
         /// <summary>
         /// The data protector.

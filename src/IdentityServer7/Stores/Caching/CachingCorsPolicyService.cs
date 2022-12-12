@@ -6,9 +6,9 @@ using IdentityServer7.Extensions;
 using IdentityServer7.Services;
 using IdentityServer7.Configuration;
 using Microsoft.Extensions.Logging;
-using IdentityServer7.Stores.Services;
+using IdentityServer7.Storage.Services;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     /// <summary>
     /// Caching decorator for ICorsPolicyService

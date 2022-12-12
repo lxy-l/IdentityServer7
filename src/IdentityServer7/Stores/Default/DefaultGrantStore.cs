@@ -5,12 +5,14 @@
 using IdentityServer7.Extensions;
 using IdentityServer7.Models;
 using IdentityServer7.Services;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Stores;
-using IdentityServer7.Stores.Stores.Serialization;
+using IdentityServer7.Storage.Stores;
+using IdentityServer7.Storage.Stores.Serialization;
+using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Stores;
+
 using Microsoft.Extensions.Logging;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     /// <summary>
     /// Base class for persisting grants using the IPersistedGrantStore.

@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Http;
 using IdentityServer7.Extensions;
 using IdentityServer7.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using IdentityServer7.Models;
 
 namespace IdentityServer7.Endpoints.Results

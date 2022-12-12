@@ -3,13 +3,13 @@
 
 
 using IdentityServer7.Services;
-using IdentityServer7.Stores;
+using IdentityServer7.Storage;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Configuration;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Services;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Services;
+using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Stores;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

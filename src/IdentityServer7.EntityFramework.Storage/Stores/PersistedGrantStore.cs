@@ -4,11 +4,11 @@
 
 using IdentityServer7.EntityFramework.Storage.Interfaces;
 using IdentityServer7.EntityFramework.Storage.Mappers;
-using IdentityServer7.Stores.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using IdentityServer7.Stores.Extensions;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Stores;
+using IdentityServer7.Storage.Extensions;
+using IdentityServer7.Storage.Models;
 
 namespace IdentityServer7.EntityFramework.Storage.Stores;
 
@@ -69,7 +69,7 @@ public class PersistedGrantStore : IPersistedGrantStore
     }
 
     /// <inheritdoc/>
-    public virtual async Task<IdentityServer7.Stores.Models.PersistedGrant> GetAsync(string key)
+    public virtual async Task<PersistedGrant> GetAsync(string key)
     {
         var persistedGrant = (await Context.PersistedGrants.AsNoTracking().Where(x => x.Key == key).ToArrayAsync())
             .SingleOrDefault(x => x.Key == key);
@@ -81,7 +81,7 @@ public class PersistedGrantStore : IPersistedGrantStore
     }
 
     /// <inheritdoc/>
-    public async Task<IEnumerable<IdentityServer7.Stores.Models.PersistedGrant>> GetAllAsync(PersistedGrantFilter filter)
+    public async Task<IEnumerable<PersistedGrant>> GetAllAsync(PersistedGrantFilter filter)
     {
         filter.Validate();
 

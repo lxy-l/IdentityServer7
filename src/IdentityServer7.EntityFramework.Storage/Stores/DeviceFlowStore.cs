@@ -3,11 +3,13 @@
 
 
 using IdentityModel;
+
 using IdentityServer7.EntityFramework.Storage.Entities;
 using IdentityServer7.EntityFramework.Storage.Interfaces;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Stores;
-using IdentityServer7.Stores.Stores.Serialization;
+using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Stores;
+using IdentityServer7.Storage.Stores.Serialization;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 

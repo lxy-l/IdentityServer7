@@ -2,14 +2,14 @@
 // Licensed under the Apache License, Version 2.0. See LICENSE in the project root for license information.
 
 
-using IdentityServer7.Stores.Stores.Serialization;
 using Microsoft.Extensions.Logging;
 using IdentityServer7.Extensions;
 using IdentityServer7.Services;
-using IdentityServer7.Stores.Models;
-using IdentityServer7.Stores.Stores;
+using IdentityServer7.Storage.Stores;
+using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Stores.Serialization;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     /// <summary>
     /// Default authorization code store.

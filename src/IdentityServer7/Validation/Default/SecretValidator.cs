@@ -4,9 +4,9 @@
 
 using IdentityServer7.Extensions;
 using IdentityServer7.Models;
-using IdentityServer7.Stores.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication;
+using IdentityServer7.Storage.Models;
 
 namespace IdentityServer7.Validation
 {

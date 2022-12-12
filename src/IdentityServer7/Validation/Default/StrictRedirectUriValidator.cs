@@ -3,7 +3,7 @@
 
 
 using IdentityServer7.Extensions;
-using IdentityServer7.Stores.Models;
+using IdentityServer7.Storage.Models;
 
 namespace IdentityServer7.Validation
 {

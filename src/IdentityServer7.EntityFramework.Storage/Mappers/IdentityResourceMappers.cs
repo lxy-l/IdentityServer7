@@ -3,7 +3,6 @@
 
 
 using AutoMapper;
-using IdentityServer7.EntityFramework.Storage.Entities;
 
 namespace IdentityServer7.EntityFramework.Storage.Mappers;
 
@@ -25,9 +24,9 @@ public static class IdentityResourceMappers
     /// </summary>
     /// <param name="entity">The entity.</param>
     /// <returns></returns>
-    public static IdentityServer7.Stores.Models.IdentityResource ToModel(this IdentityResource entity)
+    public static IdentityServer7.Storage.Models.IdentityResource ToModel(this Entities.IdentityResource entity)
     {
-        return entity == null ? null : Mapper.Map<IdentityServer7.Stores.Models.IdentityResource>(entity);
+        return entity == null ? null : Mapper.Map<IdentityServer7.Storage.Models.IdentityResource>(entity);
     }
 
     /// <summary>
@@ -35,8 +34,8 @@ public static class IdentityResourceMappers
     /// </summary>
     /// <param name="model">The model.</param>
     /// <returns></returns>
-    public static IdentityResource ToEntity(this IdentityServer7.Stores.Models.IdentityResource model)
+    public static Entities.IdentityResource ToEntity(this IdentityServer7.Storage.Models.IdentityResource model)
     {
-        return model == null ? null : Mapper.Map<IdentityResource>(model);
+        return model == null ? null : Mapper.Map<Entities.IdentityResource>(model);
     }
 }

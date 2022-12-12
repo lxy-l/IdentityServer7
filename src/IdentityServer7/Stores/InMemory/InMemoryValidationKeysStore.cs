@@ -4,12 +4,12 @@
 
 using IdentityServer7.Models;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     /// <summary>
     /// The default validation key store
     /// </summary>
-    /// <seealso cref="IdentityServer7.Stores.IValidationKeysStore" />
+    /// <seealso cref="IdentityServer7.Storage.IValidationKeysStore" />
     public class InMemoryValidationKeysStore : IValidationKeysStore
     {
         private readonly IEnumerable<SecurityKeyInfo> _keys;

@@ -4,7 +4,7 @@
 
 using Microsoft.IdentityModel.Tokens;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     /// <summary>
     /// Interface for a signing credential store

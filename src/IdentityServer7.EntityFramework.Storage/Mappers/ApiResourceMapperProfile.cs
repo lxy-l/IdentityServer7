@@ -4,6 +4,8 @@
 
 using AutoMapper;
 
+using IdentityServer7.Storage.Models;
+
 namespace IdentityServer7.EntityFramework.Storage.Mappers;
 
 /// <summary>
@@ -20,8 +22,8 @@ public class ApiResourceMapperProfile : Profile
         CreateMap<Entities.ApiResourceProperty, KeyValuePair<string, string>>()
             .ReverseMap();
 
-        CreateMap<Entities.ApiResource, IdentityServer7.Stores.Models.ApiResource>(MemberList.Destination)
-            .ConstructUsing(src => new IdentityServer7.Stores.Models.ApiResource())
+        CreateMap<Entities.ApiResource, ApiResource>(MemberList.Destination)
+            .ConstructUsing(src => new IdentityServer7.Storage.Models.ApiResource())
             .ForMember(x => x.ApiSecrets, opts => opts.MapFrom(x => x.Secrets))
             .ForMember(x=>x.AllowedAccessTokenSigningAlgorithms, opts => opts.ConvertUsing(AllowedSigningAlgorithmsConverter.Converter, x=>x.AllowedAccessTokenSigningAlgorithms))
             .ReverseMap()
@@ -32,7 +34,7 @@ public class ApiResourceMapperProfile : Profile
             .ReverseMap()
             .ForMember(dest => dest.Type, opt => opt.MapFrom(src => src));
 
-        CreateMap<Entities.ApiResourceSecret, IdentityServer7.Stores.Models.Secret>(MemberList.Destination)
+        CreateMap<Entities.ApiResourceSecret, Secret>(MemberList.Destination)
             .ForMember(dest => dest.Type, opt => opt.Condition(srs => srs != null))
             .ReverseMap();
 

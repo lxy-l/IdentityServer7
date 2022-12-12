@@ -4,7 +4,7 @@
 
 using IdentityServer7.Models;
 
-namespace IdentityServer7.Stores
+namespace IdentityServer7.Storage
 {
     public class ConsentMessageStore : IConsentMessageStore
     {
