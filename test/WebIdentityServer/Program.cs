@@ -36,7 +36,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
     //初始化数据
-    //app.EnsureSeedData().ConfigureAwait(false);
+    app.EnsureSeedData().ConfigureAwait(false);
 }
 else
 {

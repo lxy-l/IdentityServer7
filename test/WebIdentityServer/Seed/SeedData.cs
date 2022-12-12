@@ -105,33 +105,46 @@ namespace WebIdentityServer.Seed
 
             async Task CreateClients()
             {
-                if (!await context.Clients.AnyAsync())
+                var clients = await context.Clients
+                    .Distinct()
+                    .ToDictionaryAsync(x => x.ClientId);
+                
+                foreach (var item in Config.Clients)
                 {
-                    foreach (var item in Config.Clients)
+                    if (!clients.ContainsKey(item.ClientId))
                     {
                         await context.Clients.AddAsync(item.ToEntity());
                     }
+
                 }
             }
 
             async Task CreateScopes()
             {
-                if (!await context.ApiScopes.AnyAsync())
-                {
+                    var apiScopes = await context.ApiScopes
+                        .Distinct()
+                        .ToDictionaryAsync(x=>x.Name);
+                    
                     foreach (var item in Config.ApiScopes)
                     {
-                        await context.ApiScopes.AddAsync(item.ToEntity());
+                        if (!apiScopes.ContainsKey(item.Name))
+                        {
+                            await context.ApiScopes.AddAsync(item.ToEntity());
+                        }
+                        
                     }
-                }
             }
 
             async Task CreateApiResources()
             {
-                if (!await context.ApiScopes.AnyAsync())
-                {
-                    foreach (var item in Config.ApiResources)
-                    {
+                var apiResources = await context.ApiResources
+                       .Distinct()
+                       .ToDictionaryAsync(x => x.Name);
 
+                foreach (var item in Config.ApiResources)
+                {
+                    if (!apiResources.ContainsKey(item.Name))
+                    {
                         await context.ApiResources.AddAsync(item.ToEntity());
                     }
                 }
@@ -139,9 +152,13 @@ namespace WebIdentityServer.Seed
 
             async Task CreateIdentityResources()
             {
-                if (!await context.ApiResources.AnyAsync())
+                var identityResources = await context.IdentityResources
+                       .Distinct()
+                       .ToDictionaryAsync(x => x.Name);
+
+                foreach (var item in Config.IdentityResources)
                 {
-                    foreach (var item in Config.IdentityResources)
+                    if (!identityResources.ContainsKey(item.Name))
                     {
                         await context.IdentityResources.AddAsync(item.ToEntity());
                     }
