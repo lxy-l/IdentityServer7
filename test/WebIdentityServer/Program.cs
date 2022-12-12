@@ -35,7 +35,8 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
-    app.EnsureSeedData().ConfigureAwait(false);
+    //初始化数据
+    //app.EnsureSeedData().ConfigureAwait(false);
 }
 else
 {

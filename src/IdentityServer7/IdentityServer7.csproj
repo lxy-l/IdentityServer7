@@ -13,11 +13,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="6.0.0" />
+    <PackageReference Include="IdentityServer7.Storage" Version="1.0.0" />
     <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.25.1" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IdentityServer7.Storage\IdentityServer7.Storage.csproj" />
   </ItemGroup>
 </Project>
