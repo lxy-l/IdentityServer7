@@ -1,13 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
+      <Authors>Roy</Authors>
+      <Copyright>StewartRoy</Copyright>
+      <Version>1.0.1</Version>
+      <Description>ASP.NET Core Identity Integration for IdentityServer7</Description>
+      <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
+      <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.AspNetIdentity</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IdentityServer7\IdentityServer7.csproj" />
+    <PackageReference Include="IdentityServer7" Version="1.0.1" />
   </ItemGroup>
 
 </Project>

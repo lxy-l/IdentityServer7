@@ -5,13 +5,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Authors>Roy</Authors>
-    <Copyright>StewartRoy</Copyright>
+    <Copyright>lxy-l</Copyright>
     <Version>1.0.1</Version>
-    <Description>Storage interfaces and models for IdentityServer7</Description>
-    <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
-    <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.Storage</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

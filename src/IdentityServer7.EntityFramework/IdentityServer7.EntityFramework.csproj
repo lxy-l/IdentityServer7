@@ -4,11 +4,17 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
+      <Authors>Roy</Authors>
+      <Copyright>StewartRoy</Copyright>
+      <Version>1.0.1</Version>
+      <Description>EntityFramework persistence layer for IdentityServer7</Description>
+      <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
+      <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.EntityFramework</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IdentityServer7" Version="1.0.0" />
-    <PackageReference Include="IdentityServer7.EntityFramework.Storage" Version="1.0.0" />
+    <PackageReference Include="IdentityServer7" Version="1.0.1" />
+    <PackageReference Include="IdentityServer7.EntityFramework.Storage" Version="1.0.1" />
   </ItemGroup>
 
 </Project>

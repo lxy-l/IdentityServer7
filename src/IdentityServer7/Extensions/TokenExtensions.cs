@@ -15,7 +15,7 @@ using IdentityServer7.Storage.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Logging;
 
-using Newtonsoft.Json.Linq;
+//using Newtonsoft.Json.Linq;
 
 namespace IdentityServer7.Extensions
 {

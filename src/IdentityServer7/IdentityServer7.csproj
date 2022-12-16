@@ -4,6 +4,12 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
+      <Authors>Roy</Authors>
+      <Copyright>StewartRoy</Copyright>
+      <Version>1.0.1</Version>
+      <Description>OpenID Connect and OAuth 2.0 Framework for ASP.NET Core</Description>
+      <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
+      <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,9 +19,8 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="6.0.0" />
-    <PackageReference Include="IdentityServer7.Storage" Version="1.0.0" />
+    <PackageReference Include="IdentityServer7.Storage" Version="1.0.1" />
     <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.25.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.1" />
   </ItemGroup>
 </Project>
