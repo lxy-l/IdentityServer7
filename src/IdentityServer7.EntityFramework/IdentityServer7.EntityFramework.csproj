@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -6,10 +6,12 @@
     <Nullable>disable</Nullable>
       <Authors>Roy</Authors>
       <Copyright>StewartRoy</Copyright>
-      <Version>1.0.2</Version>
+      <Version>2.0.0</Version>
+      <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
       <Description>EntityFramework persistence layer for IdentityServer7</Description>
       <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
       <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.EntityFramework</PackageProjectUrl>
+      <PackageId>IdentityServer7.EntityFrameworkCore</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -21,8 +23,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IdentityServer7" Version="1.0.2" />
-    <PackageReference Include="IdentityServer7.EntityFramework.Storage" Version="1.0.2" />
+    <PackageReference Include="IdentityServer7" Version="2.0.0" />
+    <PackageReference Include="IdentityServer7.EntityFramework.DataStorage" Version="2.0.0" />
   </ItemGroup>
 
 </Project>

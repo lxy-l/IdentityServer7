@@ -6,10 +6,12 @@
     <Nullable>disable</Nullable>
       <Authors>Roy</Authors>
       <Copyright>StewartRoy</Copyright>
-      <Version>1.0.2</Version>
+      <Version>2.0.0</Version>
+      <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
       <Description>EntityFramework persistence layer for IdentityServer7</Description>
       <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
       <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.EntityFramework.Storage</PackageProjectUrl>
+      <PackageId>IdentityServer7.EntityFramework.DataStorage</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -25,7 +27,7 @@
     <None Remove="AutoMapper" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="IdentityServer7.Storage" Version="1.0.2" />
+    <PackageReference Include="IdentityServer7.Storage" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.1" />
     <PackageReference Include="AutoMapper" Version="12.0.0" />
   </ItemGroup>
