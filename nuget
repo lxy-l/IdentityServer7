@@ -1,0 +1,9 @@
+dotnet nuget push -s http://localhost:9000/v3/index.json IdentityServer7.Storage.1.0.2.nupkg
+
+dotnet nuget push -s http://localhost:9000/v3/index.json IdentityServer7.EntityFramework.Storage.1.0.2.nupkg
+
+dotnet nuget push -s http://localhost:9000/v3/index.json IdentityServer7.1.0.2.nupkg
+
+dotnet nuget push -s http://localhost:9000/v3/index.json IdentityServer7.AspNetIdentity.1.0.2.nupkg
+
+dotnet nuget push -s http://localhost:9000/v3/index.json IdentityServer7.EntityFramework.1.0.2.nupkg

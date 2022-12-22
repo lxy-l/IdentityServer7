@@ -6,14 +6,22 @@
     <Nullable>disable</Nullable>
       <Authors>Roy</Authors>
       <Copyright>StewartRoy</Copyright>
-      <Version>1.0.1</Version>
+      <Version>1.0.2</Version>
       <Description>ASP.NET Core Identity Integration for IdentityServer7</Description>
       <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
       <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.AspNetIdentity</PackageProjectUrl>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;1591</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="IdentityServer7" Version="1.0.1" />
+    <PackageReference Include="IdentityServer7" Version="1.0.2" />
   </ItemGroup>
 
 </Project>

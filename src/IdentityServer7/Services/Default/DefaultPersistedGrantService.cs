@@ -3,12 +3,11 @@
 
 
 using IdentityServer7.Models;
-using Microsoft.Extensions.Logging;
-using IdentityServer7.Storage;
-using IdentityServer7.Storage.Stores;
-using IdentityServer7.Storage.Stores;
 using IdentityServer7.Storage.Models;
+using IdentityServer7.Storage.Stores;
 using IdentityServer7.Storage.Stores.Serialization;
+
+using Microsoft.Extensions.Logging;
 
 namespace IdentityServer7.Services
 {

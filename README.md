@@ -13,6 +13,7 @@
 7. 重写ClaimConverter类
 8. 重写TokenExtensions中的CreateJwtPayload方法
 9. 修复升级后的相关错误
+10. 弃用已过时的方法
 
 ## Acknowledgements
 IdentityServer7 is built using the following great open source projects and free services:
