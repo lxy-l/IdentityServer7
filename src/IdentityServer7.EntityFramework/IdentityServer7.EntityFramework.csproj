@@ -4,14 +4,23 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
-      <Authors>Roy</Authors>
-      <Copyright>StewartRoy</Copyright>
-      <Version>2.0.0</Version>
       <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
       <Description>EntityFramework persistence layer for IdentityServer7</Description>
       <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
       <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.EntityFramework</PackageProjectUrl>
       <PackageId>IdentityServer7.EntityFrameworkCore</PackageId>
+      <GenerateDocumentationFile>True</GenerateDocumentationFile>
+      <Authors>StewartRoy</Authors>
+      <Copyright>lxy-l</Copyright>
+      <IncludeSymbols>True</IncludeSymbols>
+      <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+      <VersionPrefix>2.0.4</VersionPrefix>
+      <PackageReadmeFile>README.md</PackageReadmeFile>
+      <RepositoryUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.EntityFramework</RepositoryUrl>
+      <RepositoryType>git</RepositoryType>
+      <PackageTags>IdentityServer7.EntityFramework</PackageTags>
+      <PackageReleaseNotes>IdentityServer7.EntityFramework</PackageReleaseNotes>
+      <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -23,8 +32,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IdentityServer7" Version="2.0.0" />
-    <PackageReference Include="IdentityServer7.EntityFramework.DataStorage" Version="2.0.0" />
+    <ProjectReference Include="..\IdentityServer7.EntityFramework.Storage\IdentityServer7.EntityFramework.Storage.csproj" />
+    <ProjectReference Include="..\IdentityServer7\IdentityServer7.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
