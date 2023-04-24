@@ -14,7 +14,7 @@
       <Copyright>lxy-l</Copyright>
       <IncludeSymbols>True</IncludeSymbols>
       <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-      <VersionPrefix>2.0.4</VersionPrefix>
+      <VersionPrefix>2.0.5</VersionPrefix>
       <PackageReadmeFile>README.md</PackageReadmeFile>
       <RepositoryType>git</RepositoryType>
       <PackageTags>IdentityServer7</PackageTags>
@@ -44,8 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="IdentityModel" Version="6.0.0" />
-    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.27.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.4" />
+    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.29.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.5" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IdentityServer7.Storage\IdentityServer7.Storage.csproj" />

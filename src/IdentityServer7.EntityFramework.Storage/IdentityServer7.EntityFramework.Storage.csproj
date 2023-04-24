@@ -14,7 +14,7 @@
       <Copyright>lxy-l</Copyright>
       <IncludeSymbols>True</IncludeSymbols>
       <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-      <VersionPrefix>2.0.4</VersionPrefix>
+      <VersionPrefix>2.0.5</VersionPrefix>
       <PackageReadmeFile>README.md</PackageReadmeFile>
       <RepositoryUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.EntityFramework.Storage</RepositoryUrl>
       <RepositoryType>git</RepositoryType>
@@ -36,7 +36,7 @@
     <None Remove="AutoMapper" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.5" />
     <PackageReference Include="AutoMapper" Version="12.0.1" />
   </ItemGroup>
   <ItemGroup>
