@@ -1,45 +1,39 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
-      <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-      <Description>ASP.NET Core Identity Integration for IdentityServer7</Description>
-      <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
-      <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.AspNetIdentity</PackageProjectUrl>
-      <PackageId>IdentityServer7.AspNet</PackageId>
-      <GenerateDocumentationFile>True</GenerateDocumentationFile>
-      <Authors>StewartRoy</Authors>
-      <Copyright>lxy-l</Copyright>
-      <IncludeSymbols>True</IncludeSymbols>
-      <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-      <VersionPrefix>2.0.4</VersionPrefix>
-      <PackageReadmeFile>README.md</PackageReadmeFile>
-      <RepositoryUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.AspNetIdentity</RepositoryUrl>
-      <RepositoryType>git</RepositoryType>
-      <PackageTags>IdentityServer7.AspNetIdentity</PackageTags>
-      <PackageReleaseNotes>IdentityServer7.AspNetIdentity</PackageReleaseNotes>
-      <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Description>ASP.NET Core Identity Integration for IdentityServer7</Description>
+    <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
+    <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.AspNetIdentity</PackageProjectUrl>
+    <PackageId>IdentityServer7.AspNet</PackageId>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Authors>StewartRoy</Authors>
+    <Copyright>lxy-l</Copyright>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <VersionPrefix>2.0.4</VersionPrefix>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.AspNetIdentity</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>IdentityServer7.AspNetIdentity</PackageTags>
+    <PackageReleaseNotes>IdentityServer7.AspNetIdentity</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\IdentityServer7\IdentityServer7.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-
 </Project>

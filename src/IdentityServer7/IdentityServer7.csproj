@@ -1,41 +1,36 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
-      <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-      <Description>OpenID Connect and OAuth 2.0 Framework for ASP.NET Core</Description>
-      <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
-      <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7</PackageProjectUrl>
-      <RepositoryUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7</RepositoryUrl>
-      <GenerateDocumentationFile>True</GenerateDocumentationFile>
-      <Authors>StewartRoy</Authors>
-      <Copyright>lxy-l</Copyright>
-      <IncludeSymbols>True</IncludeSymbols>
-      <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-      <VersionPrefix>2.0.5</VersionPrefix>
-      <PackageReadmeFile>README.md</PackageReadmeFile>
-      <RepositoryType>git</RepositoryType>
-      <PackageTags>IdentityServer7</PackageTags>
-      <PackageReleaseNotes>IdentityServer7</PackageReleaseNotes>
-      <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Description>OpenID Connect and OAuth 2.0 Framework for ASP.NET Core</Description>
+    <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
+    <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7</RepositoryUrl>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Authors>StewartRoy</Authors>
+    <Copyright>lxy-l</Copyright>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <VersionPrefix>2.0.5</VersionPrefix>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>IdentityServer7</PackageTags>
+    <PackageReleaseNotes>IdentityServer7</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
-
   <ItemGroup>
     <None Remove="IdentityModel" />
     <None Remove="Microsoft.IdentityModel.Protocols.OpenIdConnect" />
     <None Remove="Microsoft.AspNetCore.Authentication.OpenIdConnect" />
   </ItemGroup>
-
   <ItemGroup>
     <None Include="..\..\README.md">
       <Pack>True</Pack>
@@ -43,9 +38,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="IdentityModel" Version="6.0.0" />
-    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.29.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="7.0.5" />
+    <PackageReference Include="IdentityModel" Version="7.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="7.6.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.6" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IdentityServer7.Storage\IdentityServer7.Storage.csproj" />

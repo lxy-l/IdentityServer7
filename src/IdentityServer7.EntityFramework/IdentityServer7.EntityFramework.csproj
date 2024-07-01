@@ -1,46 +1,40 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
-      <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-      <Description>EntityFramework persistence layer for IdentityServer7</Description>
-      <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
-      <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.EntityFramework</PackageProjectUrl>
-      <PackageId>IdentityServer7.EntityFrameworkCore</PackageId>
-      <GenerateDocumentationFile>True</GenerateDocumentationFile>
-      <Authors>StewartRoy</Authors>
-      <Copyright>lxy-l</Copyright>
-      <IncludeSymbols>True</IncludeSymbols>
-      <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-      <VersionPrefix>2.0.4</VersionPrefix>
-      <PackageReadmeFile>README.md</PackageReadmeFile>
-      <RepositoryUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.EntityFramework</RepositoryUrl>
-      <RepositoryType>git</RepositoryType>
-      <PackageTags>IdentityServer7.EntityFramework</PackageTags>
-      <PackageReleaseNotes>IdentityServer7.EntityFramework</PackageReleaseNotes>
-      <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <Description>EntityFramework persistence layer for IdentityServer7</Description>
+    <Title>OAuth2, OAuth, 2.0, OpenID, Connect, Security, Identity, IdentityServer</Title>
+    <PackageProjectUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.EntityFramework</PackageProjectUrl>
+    <PackageId>IdentityServer7.EntityFrameworkCore</PackageId>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Authors>StewartRoy</Authors>
+    <Copyright>lxy-l</Copyright>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <VersionPrefix>2.0.4</VersionPrefix>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/lxy-l/IdentityServer7/tree/main/src/IdentityServer7.EntityFramework</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>IdentityServer7.EntityFramework</PackageTags>
+    <PackageReleaseNotes>IdentityServer7.EntityFramework</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\IdentityServer7.EntityFramework.Storage\IdentityServer7.EntityFramework.Storage.csproj" />
     <ProjectReference Include="..\IdentityServer7\IdentityServer7.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <None Update="README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
-
 </Project>

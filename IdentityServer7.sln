@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33122.133
@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebIdentityServer", "test\W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer7.Storage", "src\IdentityServer7.Storage\IdentityServer7.Storage.csproj", "{3656D123-BD20-477D-BC3E-60F6A8218558}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebMvc", "test\WebMvc\WebMvc.csproj", "{C6726CFA-AC4C-4805-8D96-33E38589951B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebMvc", "test\WebMvc\WebMvc.csproj", "{C6726CFA-AC4C-4805-8D96-33E38589951B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
